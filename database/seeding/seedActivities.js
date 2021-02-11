@@ -12,6 +12,9 @@ writeActivities.write('activity_id,city_id,review_count,activity_description,pri
 
 const seedActivities = async (writer, encoding, callback) => {
   for (let i = 1; i < 10000000; i++) {
+    if (String(i / 10000).length === 1) {
+      console.log('Activity iteration', i);
+    }
     const city = random(1, 25);
     const review_count = random(45, 26000);
     const data = `\n${i},${city},${review_count},${faker.lorem.sentence()},${faker.commerce.price()},false`;
