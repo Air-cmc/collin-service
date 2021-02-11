@@ -31,20 +31,20 @@ const App = () => {
   const { id } = useParams();
 
   const getActivityData = () => {
-    axios.get(`http://localhost:3000/activities/${city}?page=${activityPage}`)
+    axios.get(`http://52.91.70.54:3000/activities/${city}?page=${activityPage}`)
       .then((response) => setActivityInfo(response.data))
       .catch((err) => console.log(err));
   };
 
   const getCities = () => {
-    axios.get('http://localhost:3000/cities')
+    axios.get('http://52.91.70.54:3000/cities')
       .then((response) => setCities(response.data))
       .catch((err) => console.log(err));
   };
 
   const getHomeData = () => {
     city
-    && axios.get(`http://localhost:3000/homes/${city}?page=${homesPage}`)
+    && axios.get(`http://52.91.70.54:3000/homes/${city}?page=${homesPage}`)
       .then((response) => setHomeInfo(response.data))
       .then(() => getActivityData())
       .then(() => getCities())

@@ -32,7 +32,7 @@ const ActivityCard = ({ activity }) => {
 
   const handleHeartClick = (clickedActivityId) => {
     const newLiked = !liked;
-    axios.patch(`http://localhost:3000/activities/${clickedActivityId}`, { liked: newLiked })
+    axios.patch(`http://52.91.70.54:3000/activities/${clickedActivityId}`, { liked: newLiked })
       .then(() => setLiked(!liked))
       .catch((err) => console.log(err));
   };
