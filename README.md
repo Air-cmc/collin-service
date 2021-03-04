@@ -2,7 +2,7 @@
 
 * This component will display nearby accomodations, activities, surrounding cities, and other related info
 
-* To start app, run:
+* To start micro service, run:
   * npm install
   * npm run react-dev
   * npm run seed (to connect to database and populate with dummy data)
